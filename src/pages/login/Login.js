@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './login.less'
 import logo from './image/header.jpg'
 import { Form, Icon, Input, Button ,message} from 'antd';
+import memoryUtils from '../../utils/memoryUtils'
 const Item =  Form.Item;
 
 class Login extends Component {
@@ -9,7 +10,9 @@ class Login extends Component {
         e.preventDefault();
         this.props.form.validateFields((err, values) => {
             if (!err) {
-                console.log(values);
+                message.success('登录成功！');
+                memoryUtils.user = values;
+                this.props.history.push('/')
             }else{
                 message.error('错了啦!!!');
             }
@@ -74,6 +77,6 @@ class Login extends Component {
     }
 }
 
-const WrappedHorizontalLoginForm = Form.create()(Login);
+const WarpLogin = Form.create()(Login);
 
-export default WrappedHorizontalLoginForm
+export default WarpLogin
