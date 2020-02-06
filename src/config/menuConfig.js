@@ -1,0 +1,59 @@
+ const menuList =[
+     {
+       title:'首页',
+       icon:'home',
+       key:'/home'
+     },
+     {
+         title:'商品',
+         icon:'appstore',
+         key:'/appstore',
+         children:[
+             {
+                 title:'品类管理',
+                 icon:'unordered-list',
+                 key:'/category'
+             },
+             {
+                 title:'商品管理',
+                 icon:'android',
+                 key:'/product'
+             },
+
+         ]
+     },
+     {
+         title:'用户管理',
+         icon:'user',
+         key:'/user'
+     },
+     {
+         title:'角色管理',
+         icon:'reddit',
+         key:'/role'
+     },
+     {
+         title:'图形管理',
+         icon:'block',
+         key:'/block',
+         children:[
+             {
+                 title:'柱形图',
+                 icon:'bar-chart',
+                 key:'/charts/bar'
+             },
+             {
+                 title:'折线图',
+                 icon:'line-chart',
+                 key:'/charts/line'
+             },
+             {
+                 title:'饼图',
+                 icon:'pie-chart',
+                 key:'/charts/pie'
+             }
+         ]
+     },
+
+]
+ export default menuList
